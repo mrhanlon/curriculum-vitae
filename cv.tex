@@ -1,0 +1,163 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, a4paper]{article}
+\usepackage{fontspec} 
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+%\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+%\setmonofont[Scale=0.8]{Monaco}
+%%% modified by Karol Kozioł for ShareLaTeX use
+\setmainfont[
+  Ligatures={Common}, Numbers={OldStyle}, Variant=01,
+  BoldFont=LinLibertine_RB.otf,
+  ItalicFont=LinLibertine_RI.otf,
+  BoldItalicFont=LinLibertine_RBI.otf
+]{LinLibertine_R.otf}
+\setmonofont[Scale=0.8]{DejaVuSansMono.ttf}
+
+% ---- CUSTOM COMMANDS
+\chardef\&="E050
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\scriptsize #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{7pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[%dvipdfm, 
+bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Matthew R. Hanlon - vita},
+	pdfauthor={Matthew R. Hanlon},
+	pdfproducer={http://nitens.org/taraborelli/cvtex}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=MidnightBlue} 
+
+% DOCUMENT
+\begin{document}
+{\LARGE Matthew R. Hanlon}\\[1cm]
+Texas Advanced Computing Center\\
+The University of Texas at Austin\\
+J.J. Pickle Research Campus\\
+Austin, TX \texttt{78758}
+U.S.A.\\[.2cm]
+Phone: \texttt{512-475-9411}\\
+Fax: \texttt{512-475-9445}\\[.2cm]
+email: \href{mailto:mrhanlon@tacc.utexas.edu}{mrhanlon@tacc.utexas.edu}\\
+\textsc{url}: \href{http://www.tacc.utexas.edu/~mrhanlon}{http://www.tacc.utexas.edu/\textasciitilde{}mrhanlon}\\ 
+\vfill
+ Born:  November 15, 1980---Panama City, Florida\\
+Nationality:  American
+
+%%\hrule
+\section*{Current position}
+\emph{Research Engineer/Scientist Associate IV}\\
+Texas Advanced Computing Center\\
+The Univeristy of Texas at Austin
+
+%%\hrule
+\section*{Areas of specialization}
+ Web Applications • Asynchrounous Applications • User Interfaces • User Experience 
+
+%%\hrule
+\section*{Appointments held}
+\noindent
+\years{2010-present}Texas Advanced Computing Center, The University of Texas at Austin
+
+%\hrule
+\section*{Education}
+\noindent
+\years{2009}\textsc{MS} in Computer Science, The University of South Alabama, Mobile, Alabama\\
+\years{2003}\textsc{BS} in Mathematics, Spring Hill College, Mobile, Alabama
+
+
+%\hrule
+\section*{Grants, honors, \& awards}
+\noindent
+\years{2010-2011}Outstanding Master's Thesis - University of South Alabama\\
+\years{2008}Outstanding Graduate Student - University of South Alabama\\
+\years{2008}CIS Graduate Fellowship - University of South Alabama\\
+\years{2003}Presidents Honors in Mathematics - Spring Hill College\\
+\years{2003}Hutchinson Award, Philosophy - Spring Hill College
+
+\section*{Selected publications \& talks}
+
+\subsection*{Journal articles}
+\noindent
+\years{2014}M. Hanlon, W. Smith, S. Mock (2014), ``Providing resource information to users of a national computing center''. [Special issue] \emph{Concurrency and Computation: Practice and Experience}.
+
+\subsection*{Conference Papers}
+\noindent
+\years{2011}M. Hanlon, et al., ``Benefits of NoSQL databases for portals \& science gateways''. Proceedings of the 2011 TeraGrid Conference: Extreme Digital Discovery, 2011.\\
+\years{2010}M.R. Hanlon, et al., ``My-Plant.org: A phylogenetically structured social network''. Gateway Computing Environments Workshop (GCE), 2010.\\
+
+\subsection*{Presentations}
+\noindent
+\years{2013}``Using Liferay as a platform for Computational 
+Science''. Liferay North American Symposium, San Francisco, USA.\\
+\years{2013}``Introduction to Science Gateways Workshop''. Elizabeth City State University, North Carolina, USA.
+
+%\section*{Teaching}
+%
+%...
+
+%\hrule
+\section*{Service to the profession}
+
+\subsection*{Open Source Software Contibutions}
+Arabidopsis Information Portal \href{https://github.com/Arabidopsis-Information-Portal}{https://github.com/Arabidopsis-Information-Portal}\\
+iPlant Collaborative \href{https://github.com/iPlantCollaborativeOpenSource}{https://github.com/iPlantCollaborativeOpenSource}\\
+Handlebars.java \href{https://github.com/jknack/handlebars.java}{https://github.com/jknack/handlebars.java}\\
+jGrowl \href{https://github.com/stanlemon/jGrowl}{https://github.com/stanlemon/jGrowl}
+
+
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://nitens.org/taraborelli/cvtex}{
+%\fontspec{Times New Roman}
+\XeTeX }\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{http://www.tacc.utexas.edu/~mrhanlon/curriculum-vitae}{http://www.tacc.utexas.edu/\textasciitilde{}mrhanlon/curriculum-vitae}}
+\end{center}
+
+\end{document}
