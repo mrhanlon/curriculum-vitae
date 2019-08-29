@@ -17,7 +17,7 @@
 
 % DOCUMENT LAYOUT
 \usepackage{geometry}
-\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\geometry{a4paper, textwidth=5.5in, textheight=9in, marginparsep=7pt, marginparwidth=.6in}
 \setlength\parindent{0in}
 
 % FONTS
@@ -56,6 +56,10 @@
 \subsectionfont{\mdseries\scshape\normalsize}
 \subsubsectionfont{\mdseries\upshape\large}
 
+% LISTS
+\usepackage{enumitem}
+\setitemize[0]{topset=0pt,partopset=0pt,parsep=0pt,itemsep=0pt}
+
 % PDF SETUP
 % ---- FILL IN HERE THE DOC TITLE AND AUTHOR
 \usepackage[%dvipdfm,
@@ -69,35 +73,67 @@ bookmarks, colorlinks, breaklinks,
 
 % DOCUMENT
 \begin{document}
-{\LARGE Matthew R. Hanlon}\\[.5cm]
-122 North Field Street\\
+{\LARGE Matthew R. Hanlon}\\[.3cm]
+3036 Covington Place\\
 Round Rock, TX \texttt{78681}
-U.S.A.\\[.1cm]
-Phone: \texttt{251-209-8101}\\[.1cm]
-email: \href{mailto:mrhanlon@mrhanlon.com}{mrhanlon@mrhanlon.com}\\
-\textsc{url}: \href{http://mrhanlon.com}{http://mrhanlon.com}
+U.S.A.
+\begin{tabbing}
+\textsc{phone}:~~ \= \href{tel:251-209-8101}{\texttt{251-209-8101}}\\
+\textsc{email}: \> \href{mailto:mrhanlon@mrhanlon.com}{mrhanlon@mrhanlon.com}\\
+\textsc{url}: \> \href{https://mrhanlon.com}{https://mrhanlon.com}\\
+\textsc{github}: \> \href{https://github.com/mrhanlon}{https://github.com/mrhanlon}
+\end{tabbing}
 
 \vfill{}
 
 %%\hrule
-\section*{Current position}
-\emph{Manager, Web and Mobile Applications}\\
-Texas Advanced Computing Center\\
-The University of Texas at Austin
-
-%%\hrule
 \section*{Areas of specialization}
-Asynchrounous Programming • Web Applications • User Interfaces • User Experience\\
-JavaScript • Java • Python • Spring • Hibernate • Angular.js • Node.js • Django
+Web Applications • APIs • Full Stack Development\\
+Ruby • Python • Java • JavaScript • Rails • Django • Spring • Node.js\\
+Hibernate • PostgreSQL • MySQL
 
 %%\hrule
-\section*{Software Work Experience}
+\section*{Work Experience}
 \noindent
-\years{2010-present}Texas Advanced Computing Center, The University of Texas at Austin\\
-{\small Manage a group of eight developers across several projects. Mentor graduate and undergraduate interns. Lead developer and architect for multiple scientific web application projects. Implemented environment managment and build automation for projects across multiple languages, technologies, and stacks.}\\
+\years{2016-present}Principal Software Engineer, Oracle Social Cloud, Oracle, Inc.\\[.1cm]
+{\small
+    Developed high-concurrency, multi-tenant cloud applications to process and analyze millions of B2C interactions daily.
+    \begin{itemize}
+        \item{Built integrations with products across the platform resulting in enhanced customer experiences and increased revenue opportunities for the product}
+        \item{Led migration efforts to separate legacy/monolith applications into separate maintainable APIs allowing to teams to work more independently}
+        \item{Profiled applications to identify performance issues; developed solutions to optimize code, caching, database utilization, and API calls, reducing cache misses and API calls by 50\% and eliminating N+1 database queries}
+        \item{Dockerized development environment to reduce developer ramp-up and more closely replicate production during the development phase}
+    \end{itemize}
+}\\
+\years{2013-2016}Manager, Web \& Mobile Applications, Texas Advanced Computing Center\\[.1cm]
+{\small
+    Managed a group of eight full-time developers. Led development efforts for \$20M+ in scientific and cloud computing research grants. Mentored graduate and undergraduate interns.
+    \begin{itemize}
+        \item{Used Agile development principles to manage development of web, iOS, and Android applications}
+        \item{Implemented configuration management, CI/CD, and software testing best practices}
+        \item{Advocated for development standards across projects to improve code reusability and increase developer productivity}
+        \item{Presented work at conferences and meetings across the United States and overseas}
+    \end{itemize}
+}\\
 
-\years{2007-2010}Alliance Communications Management, Mobile, Alabama\\
-{\small Maintenance and feature development for a PostgreSQL database application fronted by a Java Swing desktop application for internal use by order management, billing, and technical support specialists. Developed a new web front end for said PostgreSQL database in Wicket, Spring, Hibernate, and Jasper Reports for client use.}
+\years{2010-2013}Research Engineer Scientist Associate, Texas Advanced Computing Center\\[.1cm]
+{\small
+    Developed web applications to support researchers using high-performance computing resources.
+    \begin{itemize}
+        \item{Developed APIs and services for monitoring activity and performance of supercomputing resources}
+        \item{Proposed, designed, and deployed a data warehouse for analyzing usage patterns across thousands of projects, tens of thousands of users and tens of millions of jobs run on HPC systems}
+        \item{Presented work at conferences and meetings across the United States and overseas}
+    \end{itemize}{}
+}\\
+
+\years{2007-2010}Software Engineer, Alliance Communications Management\\[.1cm]
+{\small
+    Developed Java web and desktop applications for managing telecom billing, provisioning, and technical support.
+    \begin{itemize}
+        \item{Automated bill processing using an ad hoc plugin-based solution}
+        \item{Developed new customer-facing web application to enable on-demand reporting}
+    \end{itemize}
+}\\
 
 %\hrule
 \section*{Education}
@@ -107,7 +143,7 @@ JavaScript • Java • Python • Spring • Hibernate • Angular.js • Node.
 
 \subsection*{Honors, \& awards}
 \noindent
-\years{2010-2011}Outstanding Master's Thesis, University of South Alabama\\
+\years{2010}Outstanding Master's Thesis, University of South Alabama\\
 \years{2008}Outstanding Graduate Student, University of South Alabama\\
 \years{2008}CIS Graduate Fellowship, University of South Alabama\\
 \years{2003}Presidents Honors in Mathematics, Spring Hill College\\
@@ -118,14 +154,14 @@ JavaScript • Java • Python • Spring • Hibernate • Angular.js • Node.
 
 \subsection*{Journal articles}
 \noindent
-\years{2015}R. Dooley, M. Hanlon (2015), ``Recipes 2.0: Building for Today and Tomorrow''. [Special issue] \emph{Concurrency and Computation: Practice and Experience}. \href{http://dx.doi.org/10.1002/cpe.3285}{doi:10.1002/cpe.3285}.\\
-\years{2014}M. Hanlon, W. Smith, S. Mock (2014), ``Providing resource information to users of a national computing center''. [Special issue] \emph{Concurrency and Computation: Practice and Experience}. \href{http://dx.doi.org/10.1002/cpe.3233}{doi:10.1002/cpe.3233}.
+\years{2015}R. Dooley, M. Hanlon, ``Recipes 2.0: Building for Today and Tomorrow''. [Special issue] \emph{Concurrency and Computation: Practice and Experience}. 2015. \href{http://dx.doi.org/10.1002/cpe.3285}{doi:10.1002/cpe.3285}.\\
+\years{2014}M. Hanlon, W. Smith, S. Mock, ``Providing resource information to users of a national computing center''. [Special issue] \emph{Concurrency and Computation: Practice and Experience}. 2014. \href{http://dx.doi.org/10.1002/cpe.3233}{doi:10.1002/cpe.3233}.
 
 \subsection*{Conference Papers}
 \noindent
-\years{2014}M. Hanlon, M. Vaughn, et al., ``The Arabidopsis Information Portal: An Application Platform for Data Discovery''. Proceedings of the 9th Gateway Computing Environments Workshop. \href{http://dx.doi.org/10.1109/GCE.2014.10}{doi:10.1109/GCE.2014.10}.\\
-\years{2011}M. Hanlon, et al., ``Benefits of NoSQL databases for portals \& science gateways''. Proceedings of the 2011 TeraGrid Conference: Extreme Digital Discovery, 2011. \href{http://dx.doi.org/10.1145/2016741.2016780}{doi:10.1145/2016741.2016780}\\
-\years{2010}M.R. Hanlon, et al., ``My-Plant.org: A phylogenetically structured social network''. Gateway Computing Environments Workshop (GCE), 2010. \href{http://dx.doi.org/10.1109/GCE.2010.5676118}{doi:10.1109/GCE.2010.5676118}
+\years{2017}W. C. Proctor, P. Storm, M. Hanlon, N. Mendoza, ``Securing HPC: Development of a Low Cost, Open Source, Multi-Factor Authentication Infrastructure''. International Conference for High Performance Computing, Networking, Storage and Analysis. SC '17. 2017. \href{https://doi.org/10.1145/3126908.3126957}{doi:10.1145/3126908.3126957}.\\
+\years{2014}M. Hanlon, M. Vaughn, et al., ``The Arabidopsis Information Portal: An Application Platform for Data Discovery''. Proceedings of the 9th Gateway Computing Environments Workshop. 2014. \href{http://dx.doi.org/10.1109/GCE.2014.10}{doi:10.1109/GCE.2014.10}.\\
+\years{2011}M. Hanlon, et al., ``Benefits of NoSQL databases for portals \& science gateways''. Proceedings of the 2011 TeraGrid Conference: Extreme Digital Discovery. 2011. \href{http://dx.doi.org/10.1145/2016741.2016780}{doi:10.1145/2016741.2016780}\\
 
 \subsection*{Presentations}
 \noindent
@@ -142,20 +178,8 @@ Science''. Liferay North American Symposium, San Francisco, USA.\\
 
 %\hrule
 
-\section*{Open Source Software Contibutions}
-Less Than Slash, \href{https://atom.io/packages/less-than-slash}{https://atom.io/packages/less-than-slash}\\
-CommnQ, \href{https://www.npmjs.org/package/commnq}{https://www.npmjs.org/package/commnq}\\
-Arabidopsis Information Portal, \href{https://github.com/Arabidopsis-Information-Portal}{https://github.com/Arabidopsis-Information-Portal}\\
-Foundation Backbone/Gateway DNA, \href{https://bitbucket.org/taccaci/foundation-backbone}{https://bitbucket.org/taccaci/foundation-backbone}\\
-Github, \href{https://github.com/mrhanlon}{https://github.com/mrhanlon}\\
-Bitbucket, \href{https://bitbucket.org/mrhanlon}{https://bitbucket.org/mrhanlon}\\
-Docker, \href{https://hub.docker.com/u/mrhanlon/}{https://hub.docker.com/u/mrhanlon/}
-
-\section*{Volunteering}
-Austin Give Camp 2014 \href{http://austingivecamp.org}{http://austingivecamp.org}. Part of a hackathon team to develop an application (Python, Flask, Angular.js) for \href{http://ghisallo.org/}{The Ghisallo Foundation's} \href{http://cycleacademy.org/}{Cycle Academy} project.
-
 \section*{Other Interests}
-Running • Kayaking/Canoeing • Cooking • Electronics • Science Fiction
+Running • Swimming • Triathlon • Cooking • Science Fiction
 
 
 %\vspace{1cm}
@@ -169,7 +193,7 @@ Typeset in \href{http://nitens.org/taraborelli/cvtex}{
 %\fontspec{Times New Roman}
 \XeTeX }\\
 % ---- FILL IN THE FULL URL TO YOUR CV HERE
-\href{http://mrhanlon.com/files/mrhanlon_cv.pdf}{http://mrhanlon.com/files/mrhanlon\_cv.pdf}}
+\href{https://mrhanlon.com/files/mrhanlon_cv.pdf}{https://mrhanlon.com/files/mrhanlon\_cv.pdf}}
 \end{center}
 
 \end{document}
